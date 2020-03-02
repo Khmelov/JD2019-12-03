@@ -1,0 +1,4 @@
+user.firstname=Елена
+user.lastname=Самусева
+message.question=Как дела?
+message.welcome=Привет!
