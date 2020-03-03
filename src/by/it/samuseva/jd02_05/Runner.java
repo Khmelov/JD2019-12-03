@@ -24,7 +24,6 @@ public class Runner {
                 System.out.println(res.get(Message.LEFT_OUT) +" \"end\".");
             } catch (MyException e) {
                 System.err.println(res.get(Message.EXCEPTION) + " " + res.get(Message.MESSAGE));
-                continue;
             }
 
 
