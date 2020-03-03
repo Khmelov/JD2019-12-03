@@ -1,7 +1,7 @@
 package by.it.samuseva.jd02_05;
 
 class MyException extends Exception {
-    MyException() {
+     MyException() {
     }
 
     MyException(String message) {
