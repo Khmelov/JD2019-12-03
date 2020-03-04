@@ -9,6 +9,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
 import static by.it.lozouski.calc.ConsoleRunner.langService;
+import static by.it.lozouski.calc.ConsoleRunner.logSingleton;
+
 class VarFile extends Helper {
 
     private static String varFile = Helper.getPath("vars.txt", VarFile.class);
@@ -23,6 +25,7 @@ class VarFile extends Helper {
             try {
                 parser.calculate(expression);
                 Logging.logFileRecord(expression + String.format("%s ",langService.get(Messages.MES_STORED_VAR)));
+                logSingleton.logFileRecord((expression + String.format("%s ",langService.get(Messages.MES_STORED_VAR))));//jd02-06
             } catch (CalcException e) {
                 e.printStackTrace();
             }

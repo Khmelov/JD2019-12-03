@@ -1,0 +1,4 @@
+user.firstname=Пупок
+user.lastname=Ухов
+message.question=Как дела?
+message.welcome=Привет!

@@ -12,6 +12,7 @@ class VarFile {
 
     private static String varFile = getPath("vars.txt", VarFile.class);
 
+
     static String getPath(String fileName, Class<?> aClass) {
         String root = System.getProperty("user.dir");
         String strPackage = aClass.getName().replace(aClass.getSimpleName(), "");
@@ -32,7 +33,7 @@ class VarFile {
                         }
                     });
         } catch (IOException e) {
-            throw new CalcException(ErrorMessages.FILE,e);
+            throw new CalcException(ResManager.get(ErrorMessages.FILE),e);
         }
     }
 
@@ -45,7 +46,7 @@ class VarFile {
                 }
             }
         } catch (FileNotFoundException e) {
-            throw new CalcException(ErrorMessages.FILE+" "+varFile,e);
+            throw new CalcException(ResManager.get(ErrorMessages.FILE)+" "+varFile,e);
 
         }
     }

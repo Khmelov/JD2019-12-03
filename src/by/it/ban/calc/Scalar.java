@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 class Scalar extends Var {
     private double value;
-
     Scalar(double value) {
         this.value = value;
     }
@@ -110,7 +109,7 @@ class Scalar extends Var {
         if (this.value != 0) {
             return new Scalar(other.value / this.value);
         }
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.ZERO));
+        throw new CalcException(ResManager.get(ErrorMessages.ZERO));
     }
 
     @Override
@@ -122,7 +121,7 @@ class Scalar extends Var {
             }
             return new Vector(op1);
         }
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.ZERO));
+        throw new CalcException(ResManager.get(ErrorMessages.ZERO));
     }
 
     @Override
@@ -140,6 +139,9 @@ class Scalar extends Var {
             }
             return new Matrix(op1);
         }
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.ZERO));
+        throw new CalcException(ResManager.get(ErrorMessages.ZERO));
     }
+
+
+
 }

@@ -14,7 +14,8 @@ import static by.it.borodachev.Calc.Var.*;
         unoCalcOper.put("-", 1);
         unoCalcOper.put("*", 2);
         unoCalcOper.put("/", 2);
-    }
+        LogClass.setRepFormat(new ReportShort());
+        }
     private int getIndex(List<String> operations) {
         int index = -1;
         int currentPriority = -1;
@@ -48,6 +49,11 @@ import static by.it.borodachev.Calc.Var.*;
         }
         throw new CalcException(LanguageManager.get(ErrorMessage.unknown_operation));
     }
+
+    public static void setReportFormat (Report rep) {
+        LogClass.setRepFormat(rep);
+    }
+
     public static boolean check(String s) {
         Deque<Character> deque = new LinkedList<>();
         for (char c : s.toCharArray()) {
@@ -66,19 +72,24 @@ import static by.it.borodachev.Calc.Var.*;
     }
     public Var calc(String expression) throws CalcException {
         expression = expression.replaceAll("\\s+", "");
+        LogClass.getInstance().save2log(expression);
         if (expression.equals("printvar")) {
             printvar();
         } else if (expression.equals("sortvar")) {
             sortvar();
+        } else if (expression.equals("ShortLog")) {
+               LogClass.setRepFormat(new ReportShort());
+        } else if (expression.equals("FullLog")) {
+            LogClass.setRepFormat(new ReportLong());
         } else if (expression.equals("ru")) {
             LanguageManager.setLanguage(expression);
-            System.out.println(LanguageManager.get("message.calculator_running"));
+            LogClass.getInstance().save2log(LanguageManager.get("message.calculator_running"));
         } else if (expression.equals("en")) {
             LanguageManager.setLanguage(expression);
-            System.out.println(LanguageManager.get("message.calculator_running"));
+            LogClass.getInstance().save2log(LanguageManager.get("message.calculator_running"));
         } else if (expression.equals("by")) {
             LanguageManager.setLanguage(expression);
-            System.out.println(LanguageManager.get("message.calculator_running"));
+            LogClass.getInstance().save2log(LanguageManager.get("message.calculator_running"));
         }
         else {
                 if (check(expression)) {
@@ -86,7 +97,9 @@ import static by.it.borodachev.Calc.Var.*;
                         expression = calcComplex(expression);
                     } else
                         expression = calcPrimitive(expression);
-                    return Var.createVar(expression);
+                    Var retVar=Var.createVar(expression);
+                    LogClass.getInstance().save2log(retVar.toString());
+                    return retVar;
                 }
             }
         return null;

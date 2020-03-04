@@ -32,7 +32,6 @@ class Buyer extends Thread implements IBuyer, IUseBacket {
     }
 
 
-
     public Buyer(int idBuyer, boolean pensioner) {
         super("ID покупателя: " + idBuyer + " ");
         if (pensioner) {
@@ -54,12 +53,12 @@ class Buyer extends Thread implements IBuyer, IUseBacket {
             semaphore.acquire();
             chooseGoods();
             putGoodsToBacket();
+            goToQueue();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
             semaphore.release();
         }
-        goToQueue();
         goToOut();
     }
 
@@ -101,15 +100,20 @@ class Buyer extends Thread implements IBuyer, IUseBacket {
     @Override
     public void goToQueue() {
         synchronized (this) {
-            System.out.println(this + "отправился в очередь.");
-            QueueBuyer.addBuyerToQueue(this);
+            if (pensioner) {
+                System.out.println(this + "отправился в очередь пенсионеров.");
+                QueueBuyer.addPensBuyerToQueue(this);
+            } else {
+                System.out.println(this + "отправился в очередь.");
+                QueueBuyer.addBuyerToQueue(this);
+            }
             this.waitFlag = true;
             while (this.waitFlag)
-            try {
-                this.wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+                try {
+                    this.wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
         }
     }
 

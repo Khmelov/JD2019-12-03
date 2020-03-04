@@ -1,0 +1,4 @@
+user.firstname=Шульга
+user.lastname=Вадзим
+message.question=Як справы?
+message.welcome=Прывiтанне!

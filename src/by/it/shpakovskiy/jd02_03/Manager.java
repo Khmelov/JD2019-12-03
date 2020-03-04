@@ -9,6 +9,10 @@ class Manager implements Runnable {
         this.store = store;
         new Thread(this, "Manager").start();
     }
+    //FIX. for compatibility with Java 8
+    private static String repeat(String s, int n){
+        return new String(new char[n]).replace("\0", s);
+    }
 
     public boolean isAlive() {
         return alive;
@@ -35,8 +39,8 @@ class Manager implements Runnable {
         if (ShopRunner.IN_A_TABLE) {
             String s = "│ Total buyers count: " + String.format("%4d", store.getTotalBuyersCount()) +
                     ". Total revenue: $" + String.format("%6.2f", store.getRevenue()) + "." +
-                    " ".repeat(116) + "│\n" +
-                    "└" + "─".repeat(167) + "┘";
+                    repeat(" ",116) + "│\n" +
+                    "└" + repeat("─",167) + "┘";
             System.out.println(s);
         } else
             System.out.println("Total buyers count: " + store.getTotalBuyersCount()

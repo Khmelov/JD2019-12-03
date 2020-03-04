@@ -6,6 +6,7 @@ import java.util.List;
 
 public class TaskA {
      public static void main(String[] args) {
+
         String fileName = Helper.getPath("dataTaskA.bin",TaskA.class);
         writeInt(fileName);
 

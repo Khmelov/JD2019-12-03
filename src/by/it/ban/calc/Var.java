@@ -6,7 +6,7 @@ import java.util.*;
 public abstract class Var implements Operation {
 
     private static Map<String, Var> vars=new HashMap<>();
-
+    
     @Override
     public String toString() {
         return "Var{}";
@@ -14,85 +14,85 @@ public abstract class Var implements Operation {
 
     @Override
     public Var add(Var other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.ADDITION));
+        throw new CalcException(ResManager.get(ErrorMessages.ADDITION));
     }
 
     @Override
     public Var sub(Var other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.SUBTRACTION));
+        throw new CalcException(ResManager.get(ErrorMessages.SUBTRACTION));
     }
 
     @Override
     public Var mul(Var other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.MULTIPLICATION));
+        throw new CalcException(ResManager.get(ErrorMessages.MULTIPLICATION));
     }
 
     @Override
     public Var div(Var other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.DIVISION));
+        throw new CalcException(ResManager.get(ErrorMessages.DIVISION));
     }
 
     @Override
     public Var add(Scalar other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.ADDITION));
+        throw new CalcException(ResManager.get(ErrorMessages.ADDITION));
     }
 
     @Override
     public Var sub(Scalar other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.SUBTRACTION));
+        throw new CalcException(ResManager.get(ErrorMessages.SUBTRACTION));
     }
 
     @Override
     public Var mul(Scalar other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.MULTIPLICATION));
+        throw new CalcException(ResManager.get(ErrorMessages.MULTIPLICATION));
     }
 
     @Override
     public Var div(Scalar other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.DIVISION));
+        throw new CalcException(ResManager.get(ErrorMessages.DIVISION));
     }
 
     @Override
     public Var add(Vector other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.ADDITION));
+        throw new CalcException(ResManager.get(ErrorMessages.ADDITION));
     }
 
     @Override
     public Var sub(Vector other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.SUBTRACTION));
+        throw new CalcException(ResManager.get(ErrorMessages.SUBTRACTION));
     }
 
     @Override
     public Var mul(Vector other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.MULTIPLICATION));
+        throw new CalcException(ResManager.get(ErrorMessages.MULTIPLICATION));
     }
 
     @Override
     public Var div(Vector other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.DIVISION));
+        throw new CalcException(ResManager.get(ErrorMessages.DIVISION));
     }
 
     @Override
     public Var add(Matrix other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.ADDITION));
+        throw new CalcException(ResManager.get(ErrorMessages.ADDITION));
     }
 
     @Override
     public Var sub(Matrix other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.SUBTRACTION));
+        throw new CalcException(ResManager.get(ErrorMessages.SUBTRACTION));
     }
 
     @Override
     public Var mul(Matrix other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.MULTIPLICATION));
+        throw new CalcException(ResManager.get(ErrorMessages.MULTIPLICATION));
     }
 
     @Override
     public Var div(Matrix other) throws CalcException {
-        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.DIVISION));
+        throw new CalcException(ResManager.get(ErrorMessages.DIVISION));
     }
 
-     static Var createVar(String strVar) throws CalcException {
+ /*    static Var createVar(String strVar) throws CalcException {
         if (strVar.matches(Patterns.SCALAR))
             return new Scalar(strVar);
         else if (strVar.matches(Patterns.VECTOR))
@@ -105,10 +105,10 @@ public abstract class Var implements Operation {
             if (var != null) {
                 return var;
             } else {
-                throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.INIT)+" "+strVar);
+                throw new CalcException(ResManager.get(ErrorMessages.INIT)+" "+strVar);
             }
         }
-    }
+    }*/
     static void save(String key, Var value) throws CalcException {
         vars.put(key,value);
         VarFile.save(vars);
@@ -124,5 +124,8 @@ public abstract class Var implements Operation {
         for (Map.Entry<String, Var> entry : varTreeMap.entrySet()) {
             System.out.println(entry.getKey()+"="+entry.getValue());
         }
+    }
+    static Map<String, Var> getVars() {
+        return vars;
     }
 }

@@ -5,6 +5,11 @@ class Manager implements Runnable {
     private boolean alive;
     private boolean endWork;
 
+    //FIX. for compatibility with Java 8
+    private static String repeat(String s, int n){
+        return new String(new char[n]).replace("\0", s);
+    }
+
     Manager(BulbaStore store) {
         this.store = store;
         Thread thread = new Thread(this, "Manager");
@@ -36,8 +41,8 @@ class Manager implements Runnable {
         if (ShopRunner.IN_A_TABLE){
             String s = "│ Total buyers count: " + String.format("%4d", store.getTotalBuyersCount()) +
                     ". Total revenue: $" + String.format("%6.2f", store.getRevenue()) + "." +
-                    " ".repeat(116) + "│\n" +
-                    "└" + "─".repeat(167) + "┘";
+                    repeat(" ",116) + "│\n" +
+                    "└" + repeat("─",167) + "┘";
             System.out.println(s);
         }
         System.out.println("########################## BulbaStore closed! Buy! ##########################");
