@@ -1,4 +1,4 @@
-package by.it.samuseva.jd02_06;
+package by.it.samuseva.calc_02_06;
 
 public interface Operation {
     Var add(Var other) throws CalcException;
