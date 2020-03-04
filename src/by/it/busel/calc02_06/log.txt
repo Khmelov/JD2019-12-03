@@ -1,316 +1,328 @@
-04.03.2020 14:44:33
+04.03.2020 22:26:51
 Input:
-1.04*5.9
-Output:
-6.136000000000001
-___________________
-04.03.2020 14:44:33
-Input:
-12.7*5
-Output:
-63.5
-___________________
-04.03.2020 14:44:33
-Input:
-6+12
-Output:
-18.0
-___________________
-04.03.2020 14:44:33
-Input:
-7*3.1
-Output:
-21.7
-___________________
-04.03.2020 14:44:33
-Input:
-4/8
-Output:
-0.5
-___________________
-04.03.2020 14:44:33
-Input:
-9-0.9
-Output:
-8.1
-___________________
-04.03.2020 14:44:33
-Input:
-{2,3,4}*2
-Output:
-{4.0, 6.0, 8.0}
-___________________
-04.03.2020 14:44:33
-Input:
-{3,6,9}/3
-Output:
-{1.0, 2.0, 3.0}
-___________________
-04.03.2020 14:44:33
-Input:
-{2,3,4}-5
-Output:
-{-3.0, -2.0, -1.0}
-___________________
-04.03.2020 14:44:33
-Input:
-4+{2,3,4}
-Output:
-{6.0, 7.0, 8.0}
-___________________
-04.03.2020 14:44:33
-Input:
-{2,3,4}+{5,6,7}
-Output:
-{7.0, 9.0, 11.0}
-___________________
-04.03.2020 14:44:33
-Input:
-{5,6,7}-{2,3,4}
-Output:
-{3.0, 3.0, 3.0}
-___________________
-04.03.2020 14:44:53
-Input:
-{{1,2},{8,3}}-{{2,3,3},{2,3,3}}
-Output:
-ERROR: The operation "addition" {{1.0, 2.0}, {8.0, 3.0}} + {{2.0, 3.0, 3.0}, {2.0, 3.0, 3.0}} can not be performed.
-___________________
-04.03.2020 14:44:53
-Input:
-{{1,2},{8,3}}*{{1,2},{8,3}}
-Output:
-{{17.0, 8.0}, {32.0, 25.0}}
-___________________
-04.03.2020 14:44:53
-Input:
-{2,3,4}*2
-Output:
-{4.0, 6.0, 8.0}
-___________________
-04.03.2020 14:44:53
-Input:
-{2,3}+{1,2,3}
-Output:
-ERROR: The operation "addition" {2.0, 3.0} + {1.0, 2.0, 3.0} can not be performed.
-___________________
-04.03.2020 14:44:53
-Input:
-{2,3}-{1,2,3}
-Output:
-ERROR: The operation "subtraction" {2.0, 3.0} - {1.0, 2.0, 3.0}  can not be performed.
-___________________
-04.03.2020 14:44:53
-Input:
-2/{1,2,3}
-Output:
-ERROR: The operation "division" 2.0 / {1.0, 2.0, 3.0} can not be performed.
-___________________
-04.03.2020 14:44:53
-Input:
-3.8+26.2
-Output:
-30.0
-___________________
-04.03.2020 14:44:53
-Input:
-3.8/0
-Output:
-ERROR: Division by zero.
-___________________
-04.03.2020 14:44:53
-Input:
-5*incorrect_string
+w
 Output:
 ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
 Check the expression You inputted. Then re-enter your expression, please!
 ___________________
-04.03.2020 14:48:53
+04.03.2020 22:27:44
 Input:
-printvar
+1
 Output:
-B2=2.65
-a={6.0, 7.0}
-A=7.3
-B=25.55
-C=40.15
-D=10.0
-E={10.0, 15.0}
-B1=25.0
+1.0
 ___________________
-04.03.2020 14:48:56
+04.03.2020 22:27:45
 Input:
-sortvar
+2
 Output:
-A=7.3
-B=25.55
-B1=25.0
-B2=2.65
-C=40.15
-D=10.0
-E={10.0, 15.0}
-a={6.0, 7.0}
+2.0
 ___________________
-04.03.2020 14:50:40
+04.03.2020 22:27:46
 Input:
-{{1,2},{8,3}}-2
-Output:
-{{-1.0, 0.0}, {6.0, 1.0}}
-___________________
-04.03.2020 14:50:40
-Input:
-{{1,2},{8,3}}*{1,2}
-Output:
-{5.0, 14.0}
-___________________
-04.03.2020 14:50:40
-Input:
-{{1,2},{8,3}}*{{1,2},{8,3}}
-Output:
-{{17.0, 8.0}, {32.0, 25.0}}
-___________________
-04.03.2020 14:50:40
-Input:
-{{1,2},{8,3}}+{{1,2},{8,3}}
-Output:
-{{2.0, 4.0}, {16.0, 6.0}}
-___________________
-04.03.2020 14:50:40
-Input:
-3.8+26.2
-Output:
-30.0
-___________________
-04.03.2020 14:50:40
-Input:
-87.4-23.1
-Output:
-64.30000000000001
-___________________
-04.03.2020 14:50:40
-Input:
-1.04*5.9
-Output:
-6.136000000000001
-___________________
-04.03.2020 14:50:40
-Input:
-12.7*5
-Output:
-63.5
-___________________
-04.03.2020 14:50:40
-Input:
-6+12
-Output:
-18.0
-___________________
-04.03.2020 14:50:40
-Input:
-7*3.1
-Output:
-21.7
-___________________
-04.03.2020 14:50:40
-Input:
-4/8
-Output:
-0.5
-___________________
-04.03.2020 14:50:40
-Input:
-9-0.9
-Output:
-8.1
-___________________
-04.03.2020 14:50:40
-Input:
-{2,3,4}*2
-Output:
-{4.0, 6.0, 8.0}
-___________________
-04.03.2020 14:50:40
-Input:
-{3,6,9}/3
-Output:
-{1.0, 2.0, 3.0}
-___________________
-04.03.2020 14:50:40
-Input:
-{2,3,4}-5
-Output:
-{-3.0, -2.0, -1.0}
-___________________
-04.03.2020 14:50:40
-Input:
-4+{2,3,4}
-Output:
-{6.0, 7.0, 8.0}
-___________________
-04.03.2020 14:50:40
-Input:
-{2,3,4}+{5,6,7}
-Output:
-{7.0, 9.0, 11.0}
-___________________
-04.03.2020 14:50:40
-Input:
-{5,6,7}-{2,3,4}
-Output:
-{3.0, 3.0, 3.0}
-___________________
-04.03.2020 14:50:47
-Input:
-{{1,2},{8,3}}-{{2,3,3},{2,3,3}}
-Output:
-ERROR: The operation "addition" {{1.0, 2.0}, {8.0, 3.0}} + {{2.0, 3.0, 3.0}, {2.0, 3.0, 3.0}} can not be performed.
-___________________
-04.03.2020 14:50:47
-Input:
-{{1,2},{8,3}}*{{1,2},{8,3}}
-Output:
-{{17.0, 8.0}, {32.0, 25.0}}
-___________________
-04.03.2020 14:50:47
-Input:
-{2,3,4}*2
-Output:
-{4.0, 6.0, 8.0}
-___________________
-04.03.2020 14:50:47
-Input:
-{2,3}+{1,2,3}
-Output:
-ERROR: The operation "addition" {2.0, 3.0} + {1.0, 2.0, 3.0} can not be performed.
-___________________
-04.03.2020 14:50:47
-Input:
-{2,3}-{1,2,3}
-Output:
-ERROR: The operation "subtraction" {2.0, 3.0} - {1.0, 2.0, 3.0}  can not be performed.
-___________________
-04.03.2020 14:50:47
-Input:
-2/{1,2,3}
-Output:
-ERROR: The operation "division" 2.0 / {1.0, 2.0, 3.0} can not be performed.
-___________________
-04.03.2020 14:50:47
-Input:
-3.8+26.2
-Output:
-30.0
-___________________
-04.03.2020 14:50:47
-Input:
-3.8/0
-Output:
-ERROR: Division by zero.
-___________________
-04.03.2020 14:50:47
-Input:
-5*incorrect_string
+e
 Output:
 ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
 Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 22:27:46
+Input:
+d
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 22:28:10
+Input:
+1
+Output:
+1.0
+___________________
+04.03.2020 22:28:11
+Input:
+2
+Output:
+2.0
+___________________
+04.03.2020 22:28:12
+Input:
+e
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 22:28:12
+Input:
+w
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 22:28:36
+Input:
+1
+Output:
+1.0
+___________________
+04.03.2020 22:28:36
+Input:
+2
+Output:
+2.0
+___________________
+04.03.2020 22:28:37
+Input:
+w
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 22:28:37
+Input:
+e
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 22:28:54
+Input:
+1
+Output:
+1.0
+___________________
+04.03.2020 22:28:55
+Input:
+e
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 22:28:56
+Input:
+2
+Output:
+2.0
+___________________
+04.03.2020 22:28:57
+Input:
+w
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 22:30:15
+Input:
+1
+Output:
+1.0
+___________________
+04.03.2020 22:30:15
+Input:
+2
+Output:
+2.0
+___________________
+04.03.2020 22:30:16
+Input:
+3
+Output:
+3.0
+___________________
+04.03.2020 22:30:17
+Input:
+dgf
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 22:30:18
+Input:
+
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 22:39:34
+Input:
+1
+Output:
+1.0
+___________________
+04.03.2020 22:39:34
+Input:
+2
+Output:
+2.0
+___________________
+04.03.2020 22:39:36
+Input:
+e
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 22:39:41
+Увод:
+e
+Выхад:
+ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
+Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
+___________________
+04.03.2020 22:39:42
+Увод:
+e
+Выхад:
+ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
+Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
+___________________
+04.03.2020 22:56:59
+Input:
+qwerty=1
+Output:
+1.0
+___________________
+04.03.2020 22:57:47
+Input:
+qwerty
+Output:
+1.0
+___________________
+04.03.2020 22:57:54
+Увод:
+e
+Выхад:
+ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
+Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
+___________________
+04.03.2020 22:57:56
+Увод:
+qwery
+Выхад:
+ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
+Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
+___________________
+04.03.2020 22:58:02
+Увод:
+
+Выхад:
+ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
+Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
+___________________
+04.03.2020 22:58:20
+Увод:
+qwu
+Выхад:
+ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
+Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
+___________________
+04.03.2020 22:58:22
+Увод:
+w
+Выхад:
+ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
+Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
+___________________
+04.03.2020 23:02:08
+Input:
+1
+Output:
+1.0
+___________________
+04.03.2020 23:02:09
+Input:
+2
+Output:
+2.0
+___________________
+04.03.2020 23:02:10
+Input:
+e
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 23:02:10
+Input:
+r
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 23:02:52
+Input:
+1
+Output:
+1.0
+___________________
+04.03.2020 23:02:53
+Input:
+2
+Output:
+2.0
+___________________
+04.03.2020 23:02:54
+Input:
+e
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 23:02:55
+Input:
+r
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 23:08:12
+Input:
+1
+Output:
+1.0
+___________________
+04.03.2020 23:08:12
+Input:
+e
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 23:08:14
+Input:
+12
+Output:
+12.0
+___________________
+04.03.2020 23:08:16
+Input:
+qw
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 23:08:21
+Увод:
+qw
+Выхад:
+ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
+Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
+___________________
+04.03.2020 23:08:26
+Ввод:
+qw
+Вывод:
+ERROR: (ОШИБКА:) Неправильный формат ввода или несохранённое(ые) Var-выражение(ия)!
+Проверьте выражение, которое Вы ввели. Затем введите Ваше выражение опять, пожалуйста!
+___________________
+04.03.2020 23:08:48
+Input:
+er
+Output:
+ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
+Check the expression You inputted. Then re-enter your expression, please!
+___________________
+04.03.2020 23:08:49
+Input:
+12
+Output:
+12.0
 ___________________
