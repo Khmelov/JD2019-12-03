@@ -1,10 +1,10 @@
 package by.it.busel.calc02_06;
 
 abstract class ReportBuilder {
-    protected static String blockSeparator = "\n--------------------------------------------------\n";
-    protected static String recordSeparator = "-------------------------\n";
+    static String blockSeparator = "\n--------------------------------------------------\n";
+    static String recordSeparator = "-------------------------\n";
     protected Report report;
-    protected ReportParts reportParts;
+    ReportParts reportParts;
 
     Report getReport() {
         return report;

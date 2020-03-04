@@ -37,6 +37,7 @@ class Vector extends Var {
      * @param vector another vector expression the value of which is to be assigned as a value of
      *               "this" vector expression
      */
+    @SuppressWarnings("all")
     Vector(Vector vector) {
         this.value = vector.value;
     }

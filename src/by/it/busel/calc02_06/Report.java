@@ -8,25 +8,20 @@ class Report {
 
     private String recordsBlock = "";
 
-    public void setHeading(String heading) {
+    void setHeading(String heading) {
         this.heading = heading;
     }
 
-    public void setDateTimeBlock(String dateTimeBlock) {
+    void setDateTimeBlock(String dateTimeBlock) {
         this.dateTimeBlock = dateTimeBlock;
     }
 
-    public void setRecordsBlock(String recordsBlock) {
+    void setRecordsBlock(String recordsBlock) {
         this.recordsBlock = recordsBlock;
     }
 
     @Override
     public String toString() {
         return heading + dateTimeBlock + recordsBlock;
-//        return "Report{" +
-//                "heading='" + heading + '\'' +
-//                ", dateTimeBlock='" + dateTimeBlock + '\'' +
-//                ", recordsBlock='" + recordsBlock + '\'' +
-//                '}';
     }
 }

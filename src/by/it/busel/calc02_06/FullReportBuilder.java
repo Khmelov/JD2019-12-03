@@ -13,14 +13,14 @@ public class FullReportBuilder extends ReportBuilder {
 
     @Override
     public void buildHeading() {
-        String head = blockSeparator + ">>>>>FULL REPORT" + blockSeparator;
+        String head = blockSeparator + ResourcesManager.get(Message.FULL_REPORT_HEADING) + blockSeparator;
         report.setHeading(head);
     }
 
     @Override
     public void buildDateTimeBlock() {
-        String block = blockSeparator + "LAUNCHING DATA AND TIME:\n" + calculateAndGetLaunchDateTime() + '\n' +
-                "TERMINATION DATA AND TIME:\n" + calculateAndGetTerminationDateTime() +
+        String block = blockSeparator + ResourcesManager.get(Message.REPORT_LAUNCH) + calculateAndGetLaunchDateTime() + '\n' +
+                ResourcesManager.get(Message.REPORT_TERMINATION) + calculateAndGetTerminationDateTime() +
                 blockSeparator;
         report.setDateTimeBlock(block);
     }

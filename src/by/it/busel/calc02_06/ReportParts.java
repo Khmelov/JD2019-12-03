@@ -11,28 +11,27 @@ class ReportParts {
     private Instant terminationTime;
     private LinkedHashMap<Instant, ArrayList<String>> inputOutputRecords;
     private ArrayList<String> errorTypes;
-//    private LinkedHashMap<Instant, String> outputRecords;
 
-    public Instant getLaunchTime() {
+    Instant getLaunchTime() {
         return launchTime;
     }
 
-    public Instant getTerminationTime() {
+    Instant getTerminationTime() {
         return terminationTime;
     }
 
-    public LinkedHashMap<Instant, ArrayList<String>> getInputOutputRecords() {
+    LinkedHashMap<Instant, ArrayList<String>> getInputOutputRecords() {
         return inputOutputRecords;
     }
 
-    public ArrayList<String> getErrorTypes() {
+    ArrayList<String> getErrorTypes() {
         return errorTypes;
     }
 
-    public static class Builder {
+    static class Builder {
         private ReportParts reportParts;
 
-        public Builder() {
+        Builder() {
             reportParts = new ReportParts();
             reportParts.clock = Clock.systemDefaultZone();
             reportParts.launchTime = reportParts.clock.instant();
@@ -40,7 +39,7 @@ class ReportParts {
             reportParts.errorTypes = new ArrayList<>();
         }
 
-        public Builder addInputOutputRecords(String input, String output, String errorType) {
+        Builder addInputOutputRecords(String input, String output, String errorType) {
             ArrayList<String> inputOutput = new ArrayList<>();
             inputOutput.add(input);
             inputOutput.add(output);
@@ -49,7 +48,7 @@ class ReportParts {
             return this;
         }
 
-        public ReportParts build() {
+        ReportParts build() {
             reportParts.terminationTime = reportParts.clock.instant();
             return reportParts;
         }

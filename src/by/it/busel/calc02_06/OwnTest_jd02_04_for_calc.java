@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import static org.junit.Assert.*;
-
+@SuppressWarnings("all")
 public class OwnTest_jd02_04_for_calc {
 
     private static ResourcesManager rManager = new ResourcesManager();

@@ -3,8 +3,7 @@ package by.it.busel.calc02_06;
 import java.util.Scanner;
 
 class ConsoleRunner {
-    private static final ReportParts.Builder reportPartsBuilder = new ReportParts.Builder();
-    private static Scanner scanner = new Scanner(System.in);
+    static ReportParts.Builder reportPartsBuilder = new ReportParts.Builder();
     private static Parser parser = new Parser();
     private static Printer printer = new Printer();
 
@@ -17,49 +16,26 @@ class ConsoleRunner {
         new ResourcesManager();
     }
 
-    public static void main(String[] args) {
-//        Storage storage = new Storage();
-//        ResourcesManager rManager = new ResourcesManager();
-        while (true) {
-            String varExpression = scanner.nextLine();
-            if (!varExpression.equals("end") && !varExpression.equals("конец")) {
-                if (ConsoleCommands.call(varExpression)) continue;
-                performCalculation(varExpression);
-            } else {
-                ReportParts reportParts = reportPartsBuilder.build();
-                ReportBuilder reportBuilder = createReportBuilder(reportParts);
-//                if (scanner.nextLine().equals("y")) {
-//                    reportBuilder = new FullReportBuilder();
-//                } else {
-//                    reportBuilder = new ShortReportBuilder();
-//                }
-//                reportBuilder.initializeReportingProcessWith(reportParts);
-                Reporter reporter = createReport(reportBuilder);
-//                        new Reporter();
-//                reporter.setReportBuilder(reportBuilder);
-                reporter.report();
-                break;
-            }
-
-        }
-    }
-
     static void performCalculation(String varExpression) {
         try {
             Var result = parser.calc(varExpression.replace("\\s+", ""));
             printer.printAndSave(varExpression, result.toString());
-            reportPartsBuilder.addInputOutputRecords
-                    (varExpression, result.toString(), "NOT AN EXCEPTION");
+            reportPartsBuilder = reportPartsBuilder.addInputOutputRecords
+                    (varExpression, result.toString(), ResourcesManager.get(Message.RUNNER_NOT_EXCEPTION_TYPE));
         } catch (CalcException e) {
             printer.printAndSave(varExpression, e.getMessage());
-            reportPartsBuilder.addInputOutputRecords
+            reportPartsBuilder = reportPartsBuilder.addInputOutputRecords
                     (varExpression, e.getMessage(), e.getClass().getSimpleName());
         }
     }
 
-    private static ReportBuilder createReportBuilder(ReportParts reportParts) {
-        System.out.println("Do you want a full report?\nPlease, press \"y\" if yes.\nOtherwise a short one will be printed");
-        ReportBuilder reportBuilder = scanner.nextLine().equals("y") ? new FullReportBuilder() : new ShortReportBuilder();
+    private static boolean askIfFullReport(Scanner scanner) {
+        System.out.println(ResourcesManager.get(Message.RUNNER_ASK_IF_FULL));
+        return scanner.nextLine().equals("y");
+    }
+
+    private static ReportBuilder createReportBuilder(ReportParts reportParts, boolean isFullReport) {
+        ReportBuilder reportBuilder = isFullReport ? new FullReportBuilder() : new ShortReportBuilder();
         reportBuilder.initializeReportingProcessWith(reportParts);
         return reportBuilder;
     }
@@ -68,5 +44,23 @@ class ConsoleRunner {
         Reporter reporter = new Reporter();
         reporter.setReportBuilder(reportBuilder);
         return reporter;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            String varExpression = scanner.nextLine();
+            if (!varExpression.equals("end") && !varExpression.equals("конец")) {
+                if (ConsoleCommands.call(varExpression)) continue;
+                performCalculation(varExpression);
+            } else {
+                ReportParts reportParts = reportPartsBuilder.build();
+                boolean isFullReport = askIfFullReport(scanner);
+                ReportBuilder reportBuilder = createReportBuilder(reportParts, isFullReport);
+                Reporter reporter = createReport(reportBuilder);
+                reporter.report();
+                break;
+            }
+        }
     }
 }

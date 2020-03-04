@@ -1,328 +1,302 @@
-04.03.2020 22:26:51
+05.03.2020 01:25:13
 Input:
-w
+{2,3,4}*2
+Output:
+{4.0, 6.0, 8.0}
+___________________
+05.03.2020 01:25:13
+Input:
+{3,6,9}/3
+Output:
+{1.0, 2.0, 3.0}
+___________________
+05.03.2020 01:25:13
+Input:
+{2,3,4}-5
+Output:
+{-3.0, -2.0, -1.0}
+___________________
+05.03.2020 01:25:14
+Input:
+4+{2,3,4}
+Output:
+{6.0, 7.0, 8.0}
+___________________
+05.03.2020 01:25:14
+Input:
+{2,3,4}+{5,6,7}
+Output:
+{7.0, 9.0, 11.0}
+___________________
+05.03.2020 01:25:14
+Input:
+{5,6,7}-{2,3,4}
+Output:
+{3.0, 3.0, 3.0}
+___________________
+05.03.2020 01:25:29
+Input:
+{{1,2},{8,3}}-{{2,3,3},{2,3,3}}
+Output:
+ERROR: The operation "addition" {{1.0, 2.0}, {8.0, 3.0}} + {{2.0, 3.0, 3.0}, {2.0, 3.0, 3.0}} can not be performed.
+___________________
+05.03.2020 01:25:29
+Input:
+{{1,2},{8,3}}*{{1,2},{8,3}}
+Output:
+{{17.0, 8.0}, {32.0, 25.0}}
+___________________
+05.03.2020 01:25:29
+Input:
+{2,3,4}*2
+Output:
+{4.0, 6.0, 8.0}
+___________________
+05.03.2020 01:25:29
+Input:
+{2,3}+{1,2,3}
+Output:
+ERROR: The operation "addition" {2.0, 3.0} + {1.0, 2.0, 3.0} can not be performed.
+___________________
+05.03.2020 01:25:29
+Input:
+{2,3}-{1,2,3}
+Output:
+ERROR: The operation "subtraction" {2.0, 3.0} - {1.0, 2.0, 3.0}  can not be performed.
+___________________
+05.03.2020 01:25:29
+Input:
+2/{1,2,3}
+Output:
+ERROR: The operation "division" 2.0 / {1.0, 2.0, 3.0} can not be performed.
+___________________
+05.03.2020 01:25:29
+Input:
+3.8+26.2
+Output:
+30.0
+___________________
+05.03.2020 01:25:29
+Input:
+3.8/0
+Output:
+ERROR: Division by zero.
+___________________
+05.03.2020 01:25:29
+Input:
+5*incorrect_string
 Output:
 ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
 Check the expression You inputted. Then re-enter your expression, please!
 ___________________
-04.03.2020 22:27:44
+05.03.2020 01:26:06
 Input:
-1
+{{1,2},{8,3}}-{{2,3,3},{2,3,3}}
 Output:
-1.0
+ERROR: The operation "addition" {{1.0, 2.0}, {8.0, 3.0}} + {{2.0, 3.0, 3.0}, {2.0, 3.0, 3.0}} can not be performed.
 ___________________
-04.03.2020 22:27:45
+05.03.2020 01:26:06
 Input:
-2
+{{1,2},{8,3}}*{{1,2},{8,3}}
 Output:
-2.0
+{{17.0, 8.0}, {32.0, 25.0}}
 ___________________
-04.03.2020 22:27:46
+05.03.2020 01:26:06
 Input:
-e
+{2,3,4}*2
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+{4.0, 6.0, 8.0}
 ___________________
-04.03.2020 22:27:46
+05.03.2020 01:26:06
 Input:
-d
+{2,3}+{1,2,3}
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+ERROR: The operation "addition" {2.0, 3.0} + {1.0, 2.0, 3.0} can not be performed.
 ___________________
-04.03.2020 22:28:10
+05.03.2020 01:26:06
 Input:
-1
+{2,3}-{1,2,3}
 Output:
-1.0
+ERROR: The operation "subtraction" {2.0, 3.0} - {1.0, 2.0, 3.0}  can not be performed.
 ___________________
-04.03.2020 22:28:11
+05.03.2020 01:26:06
 Input:
-2
+2/{1,2,3}
 Output:
-2.0
+ERROR: The operation "division" 2.0 / {1.0, 2.0, 3.0} can not be performed.
 ___________________
-04.03.2020 22:28:12
+05.03.2020 01:26:06
 Input:
-e
+3.8+26.2
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+30.0
 ___________________
-04.03.2020 22:28:12
+05.03.2020 01:26:06
 Input:
-w
+3.8/0
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+ERROR: Division by zero.
 ___________________
-04.03.2020 22:28:36
+05.03.2020 01:26:06
 Input:
-1
-Output:
-1.0
-___________________
-04.03.2020 22:28:36
-Input:
-2
-Output:
-2.0
-___________________
-04.03.2020 22:28:37
-Input:
-w
+5*incorrect_string
 Output:
 ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
 Check the expression You inputted. Then re-enter your expression, please!
 ___________________
-04.03.2020 22:28:37
+05.03.2020 01:26:14
 Input:
-e
+3.8+26.2
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+30.0
 ___________________
-04.03.2020 22:28:54
+05.03.2020 01:26:14
 Input:
-1
+87.4-23.1
 Output:
-1.0
+64.30000000000001
 ___________________
-04.03.2020 22:28:55
+05.03.2020 01:26:14
 Input:
-e
+1.04*5.9
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+6.136000000000001
 ___________________
-04.03.2020 22:28:56
+05.03.2020 01:26:14
 Input:
-2
+12.7*5
 Output:
-2.0
+63.5
 ___________________
-04.03.2020 22:28:57
+05.03.2020 01:26:14
 Input:
-w
+6+12
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+18.0
 ___________________
-04.03.2020 22:30:15
+05.03.2020 01:26:14
 Input:
-1
+7*3.1
 Output:
-1.0
+21.7
 ___________________
-04.03.2020 22:30:15
+05.03.2020 01:26:14
 Input:
-2
+4/8
 Output:
-2.0
+0.5
 ___________________
-04.03.2020 22:30:16
+05.03.2020 01:26:14
 Input:
-3
+9-0.9
 Output:
-3.0
+8.1
 ___________________
-04.03.2020 22:30:17
+05.03.2020 01:26:20
 Input:
-dgf
+{{1,2},{8,3}}-2
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+{{-1.0, 0.0}, {6.0, 1.0}}
 ___________________
-04.03.2020 22:30:18
+05.03.2020 01:26:20
 Input:
-
+{{1,2},{8,3}}*{1,2}
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+{5.0, 14.0}
 ___________________
-04.03.2020 22:39:34
+05.03.2020 01:26:20
 Input:
-1
+{{1,2},{8,3}}*{{1,2},{8,3}}
 Output:
-1.0
+{{17.0, 8.0}, {32.0, 25.0}}
 ___________________
-04.03.2020 22:39:34
+05.03.2020 01:26:20
 Input:
-2
+{{1,2},{8,3}}+{{1,2},{8,3}}
 Output:
-2.0
+{{2.0, 4.0}, {16.0, 6.0}}
 ___________________
-04.03.2020 22:39:36
+05.03.2020 01:26:21
 Input:
-e
+3.8+26.2
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+30.0
 ___________________
-04.03.2020 22:39:41
-Увод:
-e
-Выхад:
-ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
-Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
-___________________
-04.03.2020 22:39:42
-Увод:
-e
-Выхад:
-ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
-Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
-___________________
-04.03.2020 22:56:59
+05.03.2020 01:26:21
 Input:
-qwerty=1
+87.4-23.1
 Output:
-1.0
+64.30000000000001
 ___________________
-04.03.2020 22:57:47
+05.03.2020 01:26:21
 Input:
-qwerty
+1.04*5.9
 Output:
-1.0
+6.136000000000001
 ___________________
-04.03.2020 22:57:54
-Увод:
-e
-Выхад:
-ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
-Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
-___________________
-04.03.2020 22:57:56
-Увод:
-qwery
-Выхад:
-ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
-Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
-___________________
-04.03.2020 22:58:02
-Увод:
-
-Выхад:
-ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
-Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
-___________________
-04.03.2020 22:58:20
-Увод:
-qwu
-Выхад:
-ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
-Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
-___________________
-04.03.2020 22:58:22
-Увод:
-w
-Выхад:
-ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
-Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
-___________________
-04.03.2020 23:02:08
+05.03.2020 01:26:21
 Input:
-1
+12.7*5
 Output:
-1.0
+63.5
 ___________________
-04.03.2020 23:02:09
+05.03.2020 01:26:21
 Input:
-2
+6+12
 Output:
-2.0
+18.0
 ___________________
-04.03.2020 23:02:10
+05.03.2020 01:26:21
 Input:
-e
+7*3.1
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+21.7
 ___________________
-04.03.2020 23:02:10
+05.03.2020 01:26:21
 Input:
-r
+4/8
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+0.5
 ___________________
-04.03.2020 23:02:52
+05.03.2020 01:26:21
 Input:
-1
+9-0.9
 Output:
-1.0
+8.1
 ___________________
-04.03.2020 23:02:53
+05.03.2020 01:26:21
 Input:
-2
+{2,3,4}*2
 Output:
-2.0
+{4.0, 6.0, 8.0}
 ___________________
-04.03.2020 23:02:54
+05.03.2020 01:26:21
 Input:
-e
+{3,6,9}/3
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+{1.0, 2.0, 3.0}
 ___________________
-04.03.2020 23:02:55
+05.03.2020 01:26:21
 Input:
-r
+{2,3,4}-5
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+{-3.0, -2.0, -1.0}
 ___________________
-04.03.2020 23:08:12
+05.03.2020 01:26:21
 Input:
-1
+4+{2,3,4}
 Output:
-1.0
+{6.0, 7.0, 8.0}
 ___________________
-04.03.2020 23:08:12
+05.03.2020 01:26:21
 Input:
-e
+{2,3,4}+{5,6,7}
 Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
+{7.0, 9.0, 11.0}
 ___________________
-04.03.2020 23:08:14
+05.03.2020 01:26:21
 Input:
-12
+{5,6,7}-{2,3,4}
 Output:
-12.0
-___________________
-04.03.2020 23:08:16
-Input:
-qw
-Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
-___________________
-04.03.2020 23:08:21
-Увод:
-qw
-Выхад:
-ERROR: (ПАМЫЛКА:) Няправiльны фармат уводу альбо несахранённы(ыя) Var-выраз(ы)!
-Праверце выраз, якi Вы ўвялi. Потым увядзiце Ваш выраз зноў, калi-ласка!
-___________________
-04.03.2020 23:08:26
-Ввод:
-qw
-Вывод:
-ERROR: (ОШИБКА:) Неправильный формат ввода или несохранённое(ые) Var-выражение(ия)!
-Проверьте выражение, которое Вы ввели. Затем введите Ваше выражение опять, пожалуйста!
-___________________
-04.03.2020 23:08:48
-Input:
-er
-Output:
-ERROR: A wrong format of input expression or (an) unsaved Var-expression(s)!
-Check the expression You inputted. Then re-enter your expression, please!
-___________________
-04.03.2020 23:08:49
-Input:
-12
-Output:
-12.0
+{3.0, 3.0, 3.0}
 ___________________

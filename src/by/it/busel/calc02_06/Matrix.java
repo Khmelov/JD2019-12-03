@@ -4,8 +4,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * a matrix expression
+ * a matrix expression.
  */
+@SuppressWarnings("all")
 class Matrix extends Var {
     /**
      * a value of "this" matrix expression
