@@ -14,7 +14,7 @@ class ResourcesManager {
     /**
      * a "package"-path for ".properties"-files, which contains String data in Belarusian, Russian, English
      */
-    private static final String resourceBundleName = generateBundleName(".resources.errors");
+    private static final String resourceBundleName = generateBundleName();
 
     /**
      * a default-constructor, which sets a default Locale of a user,
@@ -58,6 +58,7 @@ class ResourcesManager {
      * is printed to System.out Print Stream
      * in Belarusian, Russian or English depending on the current Locale
      */
+    @Deprecated
     static void informAboutCurrentLocale() {
         System.out.printf(resourceBundle.getString(Message.CURRENT_LANGUAGE),
                 resourceBundle.getLocale().getDisplayLanguage());
@@ -66,11 +67,9 @@ class ResourcesManager {
     /**
      * a method that returns a String, which contains a "package"-path for ".properties"-files
      *
-     * @param fileName a String, which contains a folder, where ".properties"-files is stored,
-     *                 and a base-name for them
      * @return a String, which contains a "package"-path for ".properties"-files
      */
-    private static String generateBundleName(String fileName) {
-        return ResourcesManager.class.getPackage().getName() + fileName;
+    private static String generateBundleName() {
+        return ResourcesManager.class.getPackage().getName() + ".resources.errors";
     }
 }

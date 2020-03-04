@@ -65,6 +65,9 @@ class ConsoleCommands {
                 case "ru":
                     ResourcesManager.setLocale(localeRU);
                     break;
+                default:
+                    ConsoleRunner.performCalculation(varExpression);
+                    break;
             }
         } else {
             return false;

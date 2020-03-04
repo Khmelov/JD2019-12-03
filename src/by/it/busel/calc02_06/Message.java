@@ -17,4 +17,12 @@ public interface Message {
     String PRINTER_OUTPUT = "Printer.m.formLog_output";
 
     String CURRENT_LANGUAGE = "ResourceManager.m.informAboutCurrentLocale";
+
+    String RUNNER_NOT_EXCEPTION_TYPE = "ConsoleRunner.m.performCalculation";
+    String RUNNER_ASK_IF_FULL = "ConsoleRunner.m.askIfFullReport";
+
+    String SHORT_REPORT_HEADING = "ShortReportBuilder.m.buildHeading";
+    String FULL_REPORT_HEADING = "FullReportBuilder.m.buildHeading";
+    String REPORT_LAUNCH = "ShortReportBuilder.m.buildDateTimeBlock_launch";
+    String REPORT_TERMINATION = "ShortReportBuilder.m.buildDateTimeBlock_termination";
 }

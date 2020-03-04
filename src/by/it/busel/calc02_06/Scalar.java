@@ -3,6 +3,7 @@ package by.it.busel.calc02_06;
 /**
  * a scalar expression
  */
+@SuppressWarnings("all")
 class Scalar extends Var {
     /**
      * a value of "this" scalar expression

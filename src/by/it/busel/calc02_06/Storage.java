@@ -81,6 +81,9 @@ class Storage {
         String strStorage = storageToString();
         System.out.println(strStorage);
         LoggerSingleton.save(strStorage, "printvar");
+        ConsoleRunner.reportPartsBuilder.addInputOutputRecords
+                ("printvar", strStorage, ResourcesManager.get(Message.RUNNER_NOT_EXCEPTION_TYPE));
+
     }
 
     /**
@@ -101,6 +104,9 @@ class Storage {
         String strOrderedStorage = text.toString();
         System.out.println(strOrderedStorage);
         LoggerSingleton.save(strOrderedStorage, "sortvar");
+        ConsoleRunner.reportPartsBuilder.addInputOutputRecords
+                ("printvar", strOrderedStorage, ResourcesManager.get(Message.RUNNER_NOT_EXCEPTION_TYPE));
+
     }
 
     /**
