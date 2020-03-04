@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class TaskB {
     public static void main(String[] args) {
         //считываем текст из файла построчно в стрингбилдер
-        StringBuilder str = readTextFile(Helper.getPath("TaskB.txt", TaskA.class));
+        StringBuilder str = readTextFile(Helper.getPath("text.txt", TaskA.class));
         //подсчитываем количество знаков пунктуации
         int punctuationCount = patternMatcher(str , "[.?!,;:()]");
         //подсчитываем количество слов

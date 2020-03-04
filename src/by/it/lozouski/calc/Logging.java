@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import static by.it.lozouski.calc.ConsoleRunner.langService;
-class Logging extends Helper {
+class Logging {
     //fields
     private static String logFileTxtPath = Helper.getPath("log.txt", Logging.class);
     private static Path logPath = Paths.get(logFileTxtPath);

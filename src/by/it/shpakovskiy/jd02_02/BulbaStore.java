@@ -16,6 +16,11 @@ class BulbaStore {
     private double revenue;
     private static final Object outputMonitor = new Object();
 
+    //FIX. for compatibility with Java 8
+    private static String repeat(String s, int n){
+        return new String(new char[n]).replace("\0", s);
+    }
+
     BulbaStore(int basketsCount) {
         buyers = new HashSet<>();
         baskets = new HashSet<>();
@@ -182,14 +187,14 @@ class BulbaStore {
     private static void printTitleLine() {
         int w = ShopRunner.CHAR_IN_COLUMN;
         StringBuilder sb = new StringBuilder();
-        sb.append("┌").append("—".repeat(167)).append("┐\n");
+        sb.append("┌").append(repeat("—",167)).append("┐\n");
         sb.append("|");
         for (int i = 0; i < CASHIERS_COUNT; i++) {
             sb.append(String.format("%" + (w - 3) + "s%d  ", "cashier N", i + 1)).append('│');
         }
         sb.append(String.format("%" + (w - 2) + "s  ", "count queue")).append('│');
         sb.append(String.format("%" + (w - 2) + "s  ", "revenue")).append('│');
-        sb.append("\n").append("├").append("—".repeat(167)).append("┤");
+        sb.append("\n").append("├").append(repeat("—",167)).append("┤");
         System.out.println(sb);
     }
 
@@ -230,7 +235,7 @@ class BulbaStore {
         if (flag) {
             sb.append(String.format(" buyers count: %" + (w - 15) + "d", lineLength)).append('│');
             sb.append(String.format(" Total: %" + (w - 9) + ".2f ", setRevenue(money))).append('│');
-            sb.append("\n").append("├").append("—".repeat(167)).append("┤");
+            sb.append("\n").append("├").append(repeat("—",167)).append("┤");
         } else {
             sb.append(ShopRunner.EMPTY_COL).append('│');
             sb.append(ShopRunner.EMPTY_COL).append('│');

@@ -113,6 +113,6 @@ public abstract class Var implements Operation {
         else if (strVar.matches(Patterns.MATRIX))
             return new Matrix(strVar);
         else
-            return null; //TODO generate error here
+            return null;
     }
 }

@@ -27,3 +27,22 @@ recovery of the variable list
 save to file
 end
 I hope to see you again ✋
+recovery of the variable list
+2+2
+4.0
+4*2+2
+10.0
+утв
+ERROR: Unknown expression: утв ¯\_(ツ)_/¯
+save to file
+end
+I hope to see you again ✋
+recovery of the variable list
+2+3+5+7
+17.0
+recovery of the variable list
+2+4+5
+11.0
+save to file
+end
+I hope to see you again ✋

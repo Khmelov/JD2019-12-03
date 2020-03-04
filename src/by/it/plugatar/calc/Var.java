@@ -50,7 +50,7 @@ public class Var implements Operation {
         else {
             System.out.println("Переменная " + s + " не определена");
             }
-        throw new CalcException("Невозможно создать "+s);//return null
+        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.INIT)+" "+s);//return null
        // (vars.containsKey(s))
        // return vars.get(s);//Если содержит, то вернем соответствующий объект
     }
@@ -79,7 +79,8 @@ public class Var implements Operation {
     @Override
     public Var add(Var other) throws CalcException{
         //System.out.println("Операция сложения" + this + "+" + other + " невозможна");
-        throw new CalcException("Операция сложения" + this + "+" + other + " невозможна");
+        //throw new CalcException("Операция сложения" + this + "+" + other + " невозможна");
+        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.ADDITION)+ this + "+" + other);
         //return null;
     }
 
@@ -87,21 +88,25 @@ public class Var implements Operation {
     public Var sub(Var other) throws CalcException {
         //System.out.println("Операция вычитания" + this + "+" + other + " невозможна");
         //return null;
-        throw new CalcException("Операция вычитания" + this + "+" + other + " невозможна");
+        //throw new CalcException("Операция вычитания" + this + "+" + other + " невозможна");
+        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.SUBTRACTION) + this + "+" + other);
+
     }
 
     @Override
     public Var mul(Var other) throws CalcException{
         //System.out.println("Операция умножения" + this + "+" + other + " невозможна");
         //return null;
-        throw new CalcException("Операция умножения" + this + "+" + other + " невозможна");
+        //throw new CalcException("Операция умножения" + this + "+" + other + " невозможна");
+        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.MULTIPLICATION) + this + "+" + other);
     }
 
     @Override
     public Var div(Var other) throws CalcException{
         //System.out.println("Операция деления" + this + "+" + other + " невозможна");
         //return null;
-        throw new CalcException("Операция деления" + this + "+" + other + " невозможна");
+       // throw new CalcException("Операция деления" + this + "+" + other + " невозможна");
+        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.DIVISION)+ this + "+" + other);
     }
 }
 

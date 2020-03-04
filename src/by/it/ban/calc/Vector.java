@@ -140,4 +140,5 @@ class Vector extends Var {
         return other.div(this);
     }
 
+
 }

@@ -22,7 +22,7 @@ public class LanguageManager {
     static private Locale locale;
 
     static {
-        Locale locale = new Locale(System.getProperty("user.language"), System.getProperty("user.country"));
+        locale = new Locale(System.getProperty("user.language"), System.getProperty("user.country"));
         resource = ResourceManager.INSTANCE;
         resource.setLocale(locale);
     }
@@ -47,5 +47,9 @@ public class LanguageManager {
 
     static String get(String str) {
         return resource.get(str)+" ";
+    }
+
+    public static Locale getLocale() {
+        return locale;
     }
 }

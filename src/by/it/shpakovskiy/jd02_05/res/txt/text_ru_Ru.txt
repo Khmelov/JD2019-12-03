@@ -1,0 +1,5 @@
+text.welcome=Добро пожаловать!
+text.howDoYouDo=Как дела?
+user.name=Илья
+text.unknownCommand=Неизвестная команда
+text.languageChanged=Язык изменён на русский

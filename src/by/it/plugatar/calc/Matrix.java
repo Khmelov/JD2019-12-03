@@ -21,6 +21,19 @@ public class Matrix extends Var {
     }
 
     Matrix(String s) {
+        s = s.replaceAll("[{|}]{2,}", "");
+        String[] stringValue = s.split("[}][\\s]?,[\\s]?[{]");
+        value = new double[stringValue.length][];
+        for (int i = 0; i < stringValue.length; i++) {
+            String[] valueStringNumber = stringValue[i].trim().split(",");
+            double[] tempArr = new double[valueStringNumber.length];
+            for (int j = 0; j < valueStringNumber.length; j++) {
+                tempArr[j] = Double.parseDouble(valueStringNumber[j]);
+                value[i] = tempArr;
+            }
+        }
+/*
+
         //Убираем .0 и делимм строку на  массивы
         s = s.replace(".0", "");
         Pattern pt = Pattern.compile("[{][0-9., ]+[}]");
@@ -44,7 +57,7 @@ public class Matrix extends Var {
                 this.value[i][j] = Double.parseDouble(str[j]);
             }
         }
-
+*/
     }
 
     @Override

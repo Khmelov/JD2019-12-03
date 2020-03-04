@@ -6,24 +6,24 @@ import java.util.ResourceBundle;
 public enum ResManager {
     INSTANCE;
 
-    private ResourceBundle rb;
-    private Locale locale;
+    private static ResourceBundle rb;
+    private static Locale locale;
 
     ResManager() {
         setLocale(Locale.getDefault());
     }
 
-    void setLocale(Locale locale) {
-        this.locale = locale;
+    static void setLocale(Locale newLocale) {
+        locale = newLocale;
         String path = "by.it.ban.calc.lang.translation";
-        rb = ResourceBundle.getBundle(path, this.locale);
+        rb = ResourceBundle.getBundle(path, locale);
     }
 
     Locale getLocale() {
-        return this.locale;
+        return locale;
     }
 
-    public String get(String key) {
+    static String get(String key) {
         return rb.getString(key);
     }
 }

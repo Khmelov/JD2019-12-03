@@ -29,13 +29,14 @@ class Parser {
     }
 
     private Var oneOperation(String strLeft, String operation, String strRight) throws CalcException {
-        Var right = Var.createVar(strRight);
+        VarFactory vf = new VarFactory();
+        Var right = vf.createVar(strRight);
         if (operation.equals("=")) {
             Var.save(strLeft, right);
             return right;
         }
 
-        Var left = Var.createVar(strLeft);
+        Var left = vf.createVar(strLeft);
         if (left != null && right != null) {
             switch (operation) {
                 case "+":
@@ -69,13 +70,14 @@ class Parser {
     }
 
     Var calc(String expression) throws CalcException {
+        VarFactory vf = new VarFactory();
         expression = expression.replaceAll("\\s+", "");
         if (check(expression)) {
             if (expression.contains("(")) {
                 expression=calcComplex(expression);
             }else
                 expression=calcSimple(expression);
-            return Var.createVar(expression);
+            return vf.createVar(expression);
         }
         return null;
     }

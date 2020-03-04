@@ -1,0 +1,4 @@
+user.firstname=Геннадий
+user.lastname=Плугатарь
+message.question=Как дела?
+message.welcome=Привет!

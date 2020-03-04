@@ -5,7 +5,7 @@ class ControllerCashiers extends Thread {
     public void run() {
         while (!Dispetcher.marketClosed()) {
             Help.sleep(500);
-            int sizeQueueBuyers = QueueBuyer.getBuyersQueue().size();
+            int sizeQueueBuyers = QueueBuyer.buyerSizeQueue() + QueueBuyer.pensBuyerSizeQueue();
             int currentOpenedCashiers = Cashier.pieceCashiers;
             if (currentOpenedCashiers == 0){
                 if (sizeQueueBuyers > 0) {
@@ -13,7 +13,7 @@ class ControllerCashiers extends Thread {
                         Cashier.monitorCashier.notify();
                     }
                 }
-            }else if (sizeQueueBuyers / currentOpenedCashiers > 5){
+            }else if (sizeQueueBuyers / currentOpenedCashiers >= 5){
                 synchronized (Cashier.monitorCashier){
                     Cashier.monitorCashier.notify();
                 }

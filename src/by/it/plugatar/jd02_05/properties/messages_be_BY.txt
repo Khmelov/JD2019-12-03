@@ -1,0 +1,4 @@
+user.firstname=Генадзi
+user.lastname=Плугатар
+message.question=Як справы?
+message.welcome=Прывет!

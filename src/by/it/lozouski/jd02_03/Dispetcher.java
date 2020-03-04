@@ -5,12 +5,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 class Dispetcher {
 
     private static final int BUYERS_PLAN = 100;
-    static final int SPEED_K = 10000;
+    static final int SPEED_K = 100;
 
     private static final AtomicInteger buyersEnterCounter = new AtomicInteger(0);
     private static final AtomicInteger buyersCounter = new AtomicInteger(0);
-
-
 
     static boolean marketOpened() {
             return buyersEnterCounter.get() < BUYERS_PLAN;

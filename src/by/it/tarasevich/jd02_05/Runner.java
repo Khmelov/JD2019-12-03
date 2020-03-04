@@ -1,5 +1,8 @@
 package by.it.tarasevich.jd02_05;
 
+
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -8,6 +11,10 @@ public class Runner {
         Locale rus = new Locale("ru", "RU");
         Locale bel = new Locale("be", "BY");
         Locale eng = new Locale("en", "US");
+
+        DateFormat df1 = DateFormat.getDateInstance(DateFormat.FULL, new Locale("ru", "RU"));
+        DateFormat df2 = DateFormat.getDateInstance(DateFormat.FULL, new Locale("be", "BY"));
+        DateFormat df3 = DateFormat.getDateInstance(DateFormat.FULL, new Locale("en", "US"));
 
         //String p = "by.it.tarasevich.jd02_05.text.properties";
         //тут ошибка, явно лишнее слово properties т.к. нужен reference к ресурсам
@@ -20,15 +27,16 @@ public class Runner {
         ResourceBundle s3 = ResourceBundle.getBundle(p, eng);
 
         //каждый ключ читается отдельно, их склеивать нельзя,
-        //сначала нужно извечь, а потом использовать
+        //сначала нужно извлечь, а потом использовать
         //например, так вот будет работать
-        String str1 = s1.getString("user.name") + s1.getString("message.welcome");
+        String str1 =  String.format("%s, %s ", s1.getString("user.name"), s1.getString("message.welcome"));
         //или так даже лучше, можно вставить пробел
-        String str2 = String.format("%s %s", s2.getString("user.name"), s2.getString("message.welcome"));
+        String str2 = String.format("%s, %s ", s2.getString("user.name"), s2.getString("message.welcome"));
         //а так не будет
-        //String str3 = s3.getString("user.name, " + "message.welcome");
+        String str3 = String.format("%s, %s ", s3.getString("user.name"), s3.getString("message.welcome"));
 
-        System.out.println(str1);
-        System.out.println(str2);
+        System.out.println(str1 + df1.format(new Date()));
+        System.out.println(str2 + df2.format(new Date()));
+        System.out.println(str3 + df3.format(new Date()));
     }
 }

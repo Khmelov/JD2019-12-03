@@ -45,6 +45,7 @@ public class Matrix extends Var {
         str=str.replace(" ","");
         String[] valStr;
         Pattern pat= Pattern.compile("[^{}][0-9,/.]+");
+ //       Pattern pat= Pattern.compile(MATRIX);
         Matcher m=pat.matcher(str);
         rowLength=0;
         while (m.find()) {rowLength++;};

@@ -12,7 +12,7 @@ public enum ResMan {
 
 
     ResMan() {
-        setLocale(new Locale("en","US"));
+        setLocale( Locale.ENGLISH);
 
     }
     public Locale getLocale(){

@@ -1,0 +1,5 @@
+text.welcome=Сардэчна запрашаем!
+text.howDoYouDo=Як справы?
+user.name=Ілья
+text.unknownCommand=Невядомая каманда
+text.languageChanged=Мова зменена на беларускую

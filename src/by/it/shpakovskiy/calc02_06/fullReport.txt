@@ -1,0 +1,35 @@
+Full Report
+
+start time: 4 мар. 2020 г., 20:38:15
+Operation: a; Result: 4.0
+Operation: b; Result: 6.0
+Operation: a+b; Result: 10.0
+end time: 4 мар. 2020 г., 20:39:15
+Full Report
+
+start time: 4 мар. 2020 г., 20:42:10
+Operation: a; Result: 4.0
+Operation: a+b; Result: 10.0
+Operation: c; Result: 10.0
+Operation: v; Result: {1.0, -2.0, 3.0}
+end time: 4 мар. 2020 г., 20:43:13
+Full Report
+
+start time: 4 мар. 2020 г., 20:56:09
+end time: 4 мар. 2020 г., 20:57:16
+Full Report
+
+start time: 4 мар. 2020 г., 21:08:08
+Operation: a; Result: 4.0
+Operation: v; Result: {1.0, -2.0, 3.0}
+end time: 4 мар. 2020 г., 21:09:15
+Full Report
+
+start time: 4 мар. 2020 г., 21:10:34
+Operation: Печатать var; Result: a=4.0
+b=6.0
+c=10.0
+d=24.0
+e=2.4
+v={1.0, -2.0, 3.0}
+end time: 4 мар. 2020 г., 21:10:52

@@ -5,11 +5,11 @@ public class CalcException extends Exception {
     }
 
     public CalcException(String message) {
-        super("ERROR:"+ message);
+        super(ConsoleRunner.lang.get(ErrorMessages.ERR)+" "+ message);
     }
 
     public CalcException(String message, Throwable cause) {
-        super("ERROR:"+ message, cause);
+        super(ConsoleRunner.lang.get(ErrorMessages.ERR)+" "+ message, cause);
     }
 
     public CalcException(Throwable cause) {
@@ -17,6 +17,6 @@ public class CalcException extends Exception {
     }
 
     public CalcException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super("ERROR:"+ message, cause, enableSuppression, writableStackTrace);
+        super(ConsoleRunner.lang.get(ErrorMessages.ERR)+" "+ message, cause, enableSuppression, writableStackTrace);
     }
 }

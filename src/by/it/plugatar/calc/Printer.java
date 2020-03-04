@@ -10,6 +10,6 @@ public class Printer  {
         }
         else
             //System.out.println("Unknown ERROR!!!");
-        throw new CalcException("ERROR: Exception Variable");
+        throw new CalcException(ConsoleRunner.lang.get(ErrorMessages.UNKNOWN));
     }
 }

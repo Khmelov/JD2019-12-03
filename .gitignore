@@ -33,3 +33,4 @@ TaskC.txt
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /src/by/it/ban/jd01_08/oop/
+/src/by/it/ban/calc/log.txt

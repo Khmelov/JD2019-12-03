@@ -1,0 +1,4 @@
+user.firstname=Gennadiy
+user.lastname=Plugatar
+message.question=How do you do ?
+message.welcome=Hello!

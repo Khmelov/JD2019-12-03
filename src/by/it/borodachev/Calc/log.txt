@@ -1,0 +1,94 @@
+04.03.20 работаем 
+04.03.20 LongLog
+04.03.20 неизвестная операция LongLog class by.it.borodachev.Calc.CalcException ERROR: неизвестная операция LongLog
+04.03.20  class by.it.borodachev.Calc.CalcException ERROR: неизвестная операция LongLog
+04.03.20 FullLog
+4 марта 2020 г. en
+March 4, 2020 The calculator is running. 
+March 4, 2020 a=b
+March 4, 2020 Unknown operation b class by.it.borodachev.Calc.CalcException ERROR: Unknown operation b/nby.it.borodachev.Calc.CalcException: ERROR: Unknown operation b
+March 4, 2020  class by.it.borodachev.Calc.CalcException ERROR: Unknown operation b/nby.it.borodachev.Calc.CalcException: ERROR: Unknown operation b
+04.03.20 работаем 
+04.03.20 FullLog
+4 марта 2020 г. a=b
+4 марта 2020 г. неизвестная операция b /n46 createVar/n32 UnoOperation/n131 calcPrimitive/n99 calc/n22 main
+4 марта 2020 г.  /n46 createVar/n32 UnoOperation/n131 calcPrimitive/n99 calc/n22 main
+4 марта 2020 г. a=b
+4 марта 2020 г. неизвестная операция b /n46 createVar/n32 UnoOperation/n131 calcPrimitive/n99 calc/n22 main
+4 марта 2020 г.  /n46 createVar/n32 UnoOperation/n131 calcPrimitive/n99 calc/n22 main
+04.03.20 работаем 
+04.03.20 a=b
+04.03.20 неизвестная операция b 
+46 createVar
+32 UnoOperation
+131 calcPrimitive
+99 calc
+22 main
+04.03.20  
+46 createVar
+32 UnoOperation
+131 calcPrimitive
+99 calc
+22 main
+04.03.20 работаем 
+04.03.20 a=b
+04.03.20 неизвестная операция b class by.it.borodachev.Calc.CalcException ERROR: неизвестная операция b
+04.03.20  class by.it.borodachev.Calc.CalcException ERROR: неизвестная операция b
+04.03.20 работаем 
+04.03.20 a=b
+04.03.20 неизвестная операция b ERROR: неизвестная операция b
+04.03.20  ERROR: неизвестная операция b
+04.03.20 работаем 
+04.03.20 a=b
+04.03.20 неизвестная операция b class by.it.borodachev.Calc.CalcException
+04.03.20  class by.it.borodachev.Calc.CalcException
+04.03.20 FullLog
+4 марта 2020 г. a=b
+4 марта 2020 г. неизвестная операция b class by.it.borodachev.Calc.CalcException ERROR: неизвестная операция b
+
+46 createVar
+32 UnoOperation
+131 calcPrimitive
+99 calc
+22 main
+4 марта 2020 г.  class by.it.borodachev.Calc.CalcException ERROR: неизвестная операция b
+
+46 createVar
+32 UnoOperation
+131 calcPrimitive
+99 calc
+22 main
+04.03.20 работаем 
+04.03.20 FullLog
+4 марта 2020 г. a=b
+4 марта 2020 г. неизвестная операция b class by.it.borodachev.Calc.CalcException ERROR: неизвестная операция b
+
+46 by.it.borodachev.Calc.Var createVar
+32 by.it.borodachev.Calc.Parser UnoOperation
+131 by.it.borodachev.Calc.Parser calcPrimitive
+99 by.it.borodachev.Calc.Parser calc
+22 by.it.borodachev.Calc.ConsoleRunner main
+4 марта 2020 г.  class by.it.borodachev.Calc.CalcException ERROR: неизвестная операция b
+
+46 by.it.borodachev.Calc.Var createVar
+32 by.it.borodachev.Calc.Parser UnoOperation
+131 by.it.borodachev.Calc.Parser calcPrimitive
+99 by.it.borodachev.Calc.Parser calc
+22 by.it.borodachev.Calc.ConsoleRunner main
+04.03.20 работаем 
+04.03.20 FullLog
+4 марта 2020 г. a=b
+4 марта 2020 г. неизвестная операция b class by.it.borodachev.Calc.CalcException ERROR: неизвестная операция b
+
+46:createVar->by.it.borodachev.Calc.Var
+32:UnoOperation->by.it.borodachev.Calc.Parser
+131:calcPrimitive->by.it.borodachev.Calc.Parser
+99:calc->by.it.borodachev.Calc.Parser
+22:main->by.it.borodachev.Calc.ConsoleRunner
+4 марта 2020 г.  class by.it.borodachev.Calc.CalcException ERROR: неизвестная операция b
+
+46:createVar->by.it.borodachev.Calc.Var
+32:UnoOperation->by.it.borodachev.Calc.Parser
+131:calcPrimitive->by.it.borodachev.Calc.Parser
+99:calc->by.it.borodachev.Calc.Parser
+22:main->by.it.borodachev.Calc.ConsoleRunner
