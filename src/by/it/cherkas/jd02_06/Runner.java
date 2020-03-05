@@ -10,5 +10,6 @@ public class Runner {
         log.log("hello");
         log.log("HELLO");
         log.log("Goodbye");
+        
     }
 }

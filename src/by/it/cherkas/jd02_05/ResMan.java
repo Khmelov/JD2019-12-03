@@ -7,7 +7,7 @@ enum ResMan {
 
     INSTANCE;
 
-    private String locationRes = "by.it.cherkas.jd02_05.properties.messages";
+    private String locationRes = "by.it.cherkas.jd02_05.messages";
     private ResourceBundle resourceBundle;
 
     ResMan() {
