@@ -1,16 +1,14 @@
 package by.it.tarasevich.jd02_06;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Logger {
-
     private static volatile Logger instance;
-
-    private Logger(){
-
-    }
 
     public static Logger getInstance() {
         Logger logger = instance;
@@ -18,10 +16,42 @@ public class Logger {
             synchronized (Logger.class) {
                 logger = instance;
                 if (logger == null) {
-                    instance = logger = new Logger();
+                    instance = new Logger();
                 }
             }
         }
-        return logger;
+        return instance;
+    }
+
+    public void log(String msg) {
+        String currentTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
+
+        PrintWriter logWriter = null;
+        try {
+            logWriter = new PrintWriter(new FileWriter(getPath("log.txt", Logger.class), true));
+
+            logWriter.write(currentTime + ": " + msg + "\n");
+            logWriter.flush();
+            logWriter.close();
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
+
+    }
+
+    private static String getPath(String fileName, Class<?> aClass) {
+        String root = System.getProperty("user.dir");
+        String strPackage = aClass.getName().replace(aClass.getSimpleName(), "");
+        String path = root + File.separator + "src" + File.separator + strPackage.replace(".", File.separator);
+        fileName = path + fileName;
+        return fileName;
+    }
+
+}
+class Runner {
+    public static void main(String[] args) {
+        Logger.getInstance().log("Exception!");
+
     }
 }
+
