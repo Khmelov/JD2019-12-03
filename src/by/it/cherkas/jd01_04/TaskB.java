@@ -1,7 +1,7 @@
 package by.it.cherkas.jd01_04;
 
 
-import javax.swing.*;
+
 import java.util.Scanner;
 
 public class TaskB {

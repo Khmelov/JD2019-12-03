@@ -41,7 +41,30 @@ public class Helper {
         System.out.println();
 
     }
+
+    static double[] mul(double[][] matrix, double[] vector) {
+        double[] outPut = new double[matrix.length];
+        for (int i = 0; i < matrix.length ; i++) {
+            for (int j = 0; j < vector.length; j++) {
+                outPut[i] = outPut[i] + matrix[i][j] * vector[j];
             }
+        }
+        return outPut;
+    }
+    static double[][] mul(double[][] matrixFirst, double[][] matrixSecond) {
+        double[][] outPut = new double[matrixFirst.length][matrixSecond[0].length];
+        for (int i = 0; i < matrixFirst.length ; i++) {
+            for (int j = 0; j < matrixSecond[0].length ; j++) {
+                for (int k = 0; k < matrixSecond.length ; k++) {
+                    outPut[i][j] = outPut[i][j] + matrixFirst[i][k] * matrixSecond[k][j];
+                }
+            }
+        }
+        return outPut;
+    }
+            }
+
+
 
 
 

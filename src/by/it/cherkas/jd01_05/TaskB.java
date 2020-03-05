@@ -21,23 +21,22 @@ public class TaskB {
 
         for (double x = -5.5; x < 2; x += 0.5) {
             if (x / 2 > -2 && x / 2 <= -1) {
-                double b=sin(pow(x, 2));
-                double a = log(b+2.74);
-                System.out.printf("При x/2=%4.2f a=%-8.6e%n", x/2,a);
-            }
-            else if (x/2>-1 && x/2<0.2){
-                double b=cos(pow(x,2));
-                double a=log(b+2.74);
-                System.out.printf("При x/2=%4.2f a=%-8.6e%n", x/2,a);
-            }
-            else if (x/2==0.2){
-                double b=1/(tan(pow(x,2)));
-                double a=log(b+2.74);
-                System.out.printf("При x/2=%4.2f a=%-8.6e%n", x/2,a);
+                double b=0;
+                if (x/2<-2 || x/2>0.2) {
+                    System.out.println("При х/2=" +x/2 + "вычисления не определены");
+                    continue;
                 }
-            else if (x/2<=-2 || x/2>0.2){
-                System.out.printf("При x/2=%4.2f вычисления не определены ", x/2);
-                System.out.println();
+                else if (x/2>-2 && x/2<=-1) {
+                    b=sin(pow(x,2));
+                }
+                else if (x/2>-1 && x/2<0.2) {
+                    b=cos(pow(x,2));
+                }
+                else if (x/2==0.2) {
+                    b=cos(pow(x,2))/sin(pow(x,2));
+                }
+                double a = log10(abs(b+2.74));
+                System.out.println("При х/2=" + x/2 + " a = " + a);
             }
             }
 

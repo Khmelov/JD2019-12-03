@@ -7,7 +7,7 @@ package by.it.cherkas.jd01_07;
 
                  Vector(double[] value) {
                         this.value = new double[value.length];
-                        System.arraycopy(value, 0, this.value,0,this.value.length);
+                        System.arraycopy(value, 0, this.value,0, value.length);
 
                 }
                 Vector(Vector vector){
@@ -16,26 +16,29 @@ package by.it.cherkas.jd01_07;
                 }
 
                 Vector(String strVector){
-                         String[] vectorString=strVector.trim().substring(0, strVector.length()-1).split(", ");
-                       this.value=new double[vectorString.length];
-                        for (int i = 0; i <vectorString.length ; i++) {
-                        this.value[i]=Double.parseDouble(vectorString[i]);
+                         strVector = strVector.replaceAll("[{}]", "");
+                         strVector = strVector.replaceAll(",", " ");
+                         String[] doubNums = strVector.split(" ");
+                         value = new double[doubNums.length];
+                    for (int i = 0; i < doubNums.length; i++) {
+                        value [i] = Double.parseDouble(doubNums[i]);
+
                         }
                 }
 
 
                 @Override
                 public String toString() {
-                StringBuilder sb=new StringBuilder();
-                sb.append("{");
-                String del="";
-                        for (double element:value ) {
-                        sb.append(del);
-                        sb.append(element);
-                        del=", ";
+                StringBuilder sb=new StringBuilder("{");
+                    for (int i = 0; i < value.length; i++) {
+                        if (i !=value.length - 1) {
+                            sb.append(value[i]).append(", ");
                         }
-                        sb.append("}");
-                        return sb.toString();
+                        else {
+                            sb.append(value[i]).append("}");
+                        }
+                    }
+                    return sb.toString();
                 }
         }
 
