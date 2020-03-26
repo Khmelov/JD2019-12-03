@@ -1,3 +1,0 @@
-user.name=Дима
-message.question=Как дела?
-message.welcome=Привет!

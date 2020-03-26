@@ -1,9 +1,0 @@
-user.firstname=Алена
-user.lastname=Самусева
-message.question=Як справы?
-message.welcome=Прывiтанне!
-message.language=Абярыце мову:
-message.left=Для завяршэння увядзіце:
-message.date=Бягучая дата:
-message.exception=Памылка:
-message.message=няправільна ўведзена мова ці такой мовы няма

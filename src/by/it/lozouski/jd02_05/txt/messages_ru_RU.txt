@@ -1,5 +1,0 @@
-user.firstname=Андрей
-user.lastname=Лозовский
-message.question=Как твои дела?
-message.welcome=Приветствую!
-message.today=Сегодня:

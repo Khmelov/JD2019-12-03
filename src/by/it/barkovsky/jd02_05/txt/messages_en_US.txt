@@ -1,3 +1,0 @@
-user.Name=DIma
-message.question=How are you?
-message.welcome=Hello!

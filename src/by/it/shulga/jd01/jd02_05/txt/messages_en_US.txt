@@ -1,4 +1,0 @@
-user.firstname=Shulga
-user.lastname=Vadim
-message.question=How do you do?
-message.welcome=Hi!

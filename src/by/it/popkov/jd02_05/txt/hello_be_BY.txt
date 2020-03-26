@@ -1,3 +1,0 @@
-user.firstName=Уладзіслаў
-user.secondName=Попкоў
-message.welcome=Прывятаю!

@@ -1,9 +1,0 @@
-user.firstname=Елена
-user.lastname=Самусева
-message.question=Как дела?
-message.welcome=Привет!
-message.language=Выберите язык:
-message.left=Для завершения введите:
-message.date=Текущая дата:
-message.exception=Ошибка:
-message.message=неправильно введен язык или такого языка нет
